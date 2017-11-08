@@ -1,0 +1,341 @@
+body,
+html {
+    height: 100%;
+}
+
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.top-menu ul ul {
+    display: none;
+}
+
+.top-menu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top-menu > ul {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #dfdfdf;
+    border-radius: 5px;
+}
+
+.top-menu > ul > li > a {
+    display: block;
+}
+
+.top-menu > ul > li {
+    display: block;
+    float: left;
+    width: 14.2857%;
+    text-align: center;
+    position: relative;
+}
+
+.top-menu > ul > li::before,
+.top-menu > ul > li::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 1px;
+    top: 0;
+    left: 0;
+}
+
+.top-menu > ul > li::after {
+    left: auto;
+    right: 0;
+}
+
+.top-menu > ul > li:first-child::before,
+.top-menu > ul > li:last-child::after {
+    width: 2px;
+}
+
+.top-menu > ul > li:hover > a {
+    color: red;
+    text-decoration: underline;
+}
+
+.top-menu > ul > li:active > a {
+    background-color: black;
+}
+
+.top-menu > ul > li:hover ul {
+    display: block;
+}
+
+.top-menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    background-color: #dfdfdf;
+    padding-top: 10px;
+}
+
+.top-menu ul ul li:hover a {
+    color: red;
+    text-decoration: underline;
+}
+
+.top-menu ul ul li:first-child {
+    border-top: 3px solid gray;
+}
+
+.top-menu ul ul li:last-child {
+    border-bottom: 3px solid gray;
+}
+
+.m-top-menu {
+    display: none;
+    border: 3px solid gray;
+    position: relative;
+    max-width: 1000px;
+    background-color: gray;
+    height: 50px;
+}
+
+.m-top-menu::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.m-top-menu > div {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    float: left;
+    position: absolute;
+    top: 0;
+    padding: 10px;
+}
+
+.m-top-menu > div:active {
+    background-color: black;
+    color: white;
+}
+
+.m-top-menu > div:nth-of-type(1) {
+    left: 15px;
+}
+
+.m-top-menu > div:nth-of-type(2) {
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: bold;
+    user-select: none;
+}
+
+.m-top-menu > div:nth-of-type(3) {
+    left: auto;
+    right: 15px;
+}
+
+@media (max-width: 1000px) {
+    .top-menu {
+        display: none;
+    }
+    .m-top-menu {
+        display: block;
+    }
+    .main-logo {
+        display: none;
+    }
+}
+
+.side-menu {
+    background-color: #dfdfdf;
+    width: 30%;
+    height: 400px;
+    position: fixed;
+    transition: 1s;
+    left: -100%;
+    z-index: 3;
+    user-select: none;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu > div {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 5px solid lightgray;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.side-menu > div:nth-of-type(2),
+.side-menu > div:nth-of-type(3) {
+    border-top: 0;
+}
+
+.main-logo {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    user-select: none;
+}
+
+.side-menu > div > a {
+    display: block;
+}
+
+.side-menu > div:hover {
+    background-color: black;
+    color: white;
+}
+
+.slider-1 {
+    min-height: 500px;
+    height: 30%;
+    max-width: 700px;
+    margin: 10% auto;
+    position: relative;
+}
+
+.btns > div {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.btns > div:last-child {
+    left: auto;
+    right: 0;
+}
+
+.btns > div > i {
+    position: absolute;
+    top: 50%;
+    left: inherit;
+    right: inherit;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    margin: 0 17px;
+}
+
+.btns > div:active > i {
+    transform: translateY(-50%) translateX(-50%);
+    transition: transform 0.2s;
+}
+
+.btns > div:last-child:active > i {
+    transform: translateY(-50%) translateX(50%);
+}
+
+.slider-1 .slides > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: opacitiy 1s;
+    z-index: 1;
+    opacity: 0;
+    transition:opacity 1s;
+}
+
+.slider-1 .slides > div.active {
+    opacity: 1;
+}
+body, ul, li
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a
+{
+    color:inherit;
+    text-decoration:inherit;
+}
+body
+{
+    height:2000px;
+}
+
+.remotes
+{
+    position:fixed;
+    width:150px;
+    height:200px;
+    border:10px solid #dfdfdf;
+    bottom:5%;
+    right:5%;
+    user-select: none;
+    z-index: 3;
+    background-color:white;
+}
+.remotes>.remote>button
+{
+    display:block;
+    position:absolute;
+    bottom:0;
+    left:0;;
+    width:50%;
+}
+.remotes>.remote>button:last-child
+{
+    left:auto;
+    right:0;
+}
+.remotes>.remote>div
+{
+    position:absolute;
+    background-color:lightgray;
+    margin:0 auto;
+    text-align:center;
+    width:50%;
+    top:40%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    border-radius:5px;
+}
+
+.slider-1 .pages
+{
+    position:absolute;
+    bottom:2%;
+    left:50%;
+    transform:translateX(-50%);
+    z-index: 4;
+}
+.slider-1 .pages>div
+{
+    display:inline-block;
+    padding:10px;
+    margin:5px;
+    border:2px solid gray;
+    border-radius:50%;
+}
+.slider-1 .pages>div.active1
+{
+    background-color:gray;
+}

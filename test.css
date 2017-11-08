@@ -1,0 +1,51 @@
+body, ul, li
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a
+{
+    color:inherit;
+    text-decoration:inherit;
+}
+body
+{
+    height:2000px;
+}
+
+.remotes
+{
+    position:fixed;
+    width:200px;
+    height:100px;
+    border:10px solid #dfdfdf;
+    bottom:10%;
+    right:10%;
+    user-select: none;
+}
+.remotes>.remote>button
+{
+    display:block;
+    position:absolute;
+    bottom:0;
+    left:0;;
+    width:50%;
+}
+.remotes>.remote>button:last-child
+{
+    left:auto;
+    right:0;
+}
+.remotes>.remote>div
+{
+    position:absolute;
+    background-color:lightgray;
+    margin:0 auto;
+    text-align:center;
+    width:50%;
+    top:40%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    border-radius:5px;
+}

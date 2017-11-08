@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./test.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="remotes">
+        <div class="remote">
+            <div><a href="#">리모콘</a></div>
+            <button>맨 위로</button>
+            <button>맨 아래로</button>
+        </div>
+    </div>
+
+    <script>
+        $('.remotes .remote >button').click(function() {
+            if ($(this).index() == 1) {
+                $(window).scrollTop(0);
+            } 
+            else if ($(this).index() == 2) {
+                $(window).scrollTop($('body').height());
+            }
+
+        });
+    </script>
+</body>
+</html>
