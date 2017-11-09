@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <title>bnx-문서</title>
     <link rel="stylesheet" href="a.css">
     <style>
+
+
     </style>
 </head>
 
@@ -88,6 +91,19 @@
             <button>맨 아래로</button>
         </div>
     </div>
+
+    <div class="con">
+        <div class="row">
+            <div class="cell">
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_01_list.jpg" alt=""></div>
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_02_list.jpg" alt=""></div>
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_03_list.jpg" alt=""></div>
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_04_list.jpg" alt=""></div>
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_05_list.jpg" alt=""></div>
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_06_list.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
     <script>
         $('.m-top-menu>div:nth-of-type(1)').click(function() {
 
@@ -147,10 +163,32 @@
             if ($(this).index() == 1) {
                 $(window).scrollTop(0);
             } else if ($(this).index() == 2) {
-                $(window).scrollTop($('body').height());
+                $(window).scrollTop($('body').outerHeight());
+
             }
 
         });
+
+        function a() {
+            $('.slider-1 .btns>div:nth-of-type(2)').click();
+        }
+
+        var isOver = false;
+
+        $('.slider-1 .btns>div').mouseenter(function() {
+            isOver = true;
+        });
+        $('.slider-1 .btns>div').mouseleave(function() {
+            isOver = false;
+        });
+
+        setInterval(function() {
+            if (isOver == false) {
+                a();
+            }
+        }, 1000);
+
     </script>
 </body>
+
 </html>
