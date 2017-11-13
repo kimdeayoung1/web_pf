@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="a.css">
     <style>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0b86b94bf710b875519c4f3c3bc27c887a54a1b5
     </style>
 </head>
 
@@ -78,10 +82,15 @@
             <button>맨 아래로</button>
         </div>
     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0b86b94bf710b875519c4f3c3bc27c887a54a1b5
     <div class="con">
         <div class="row">
             <div class="cell">
                 <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_01_list.jpg" alt=""></div>
+<<<<<<< HEAD
             </div>
             <div class="cell">
                 <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_02_list.jpg" alt=""></div>
@@ -96,6 +105,12 @@
                 <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_05_list.jpg" alt=""></div>
             </div>
             <div class="cell">
+=======
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_02_list.jpg" alt=""></div>
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_03_list.jpg" alt=""></div>
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_04_list.jpg" alt=""></div>
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_05_list.jpg" alt=""></div>
+>>>>>>> 0b86b94bf710b875519c4f3c3bc27c887a54a1b5
                 <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_06_list.jpg" alt=""></div>
             </div>
         </div>
@@ -143,6 +158,12 @@
         $('.remotes .remote >button').click(function () {
             if ($(this).index() == 1) {
                 $(window).scrollTop(0);
+<<<<<<< HEAD
+=======
+            } else if ($(this).index() == 2) {
+                $(window).scrollTop($('body').outerHeight());
+
+>>>>>>> 0b86b94bf710b875519c4f3c3bc27c887a54a1b5
             }
             else if ($(this).index() == 2) {
                 $(window).scrollTop($('html').prop("scrollHeight"));
@@ -159,12 +180,38 @@
         $('.slider-1 .btns>div').mouseleave(function () {
             isOver = false;
         });
+<<<<<<< HEAD
         setInterval(function () {
+=======
+
+        function a() {
+            $('.slider-1 .btns>div:nth-of-type(2)').click();
+        }
+
+        var isOver = false;
+
+        $('.slider-1 .btns>div').mouseenter(function() {
+            isOver = true;
+        });
+        $('.slider-1 .btns>div').mouseleave(function() {
+            isOver = false;
+        });
+
+        setInterval(function() {
+>>>>>>> 0b86b94bf710b875519c4f3c3bc27c887a54a1b5
             if (isOver == false) {
                 a();
             }
         }, 1000);
+<<<<<<< HEAD
     </script>
 </body>
 
 </html>
+=======
+
+    </script>
+</body>
+
+</html>
+>>>>>>> 0b86b94bf710b875519c4f3c3bc27c887a54a1b5
