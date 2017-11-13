@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <title>bnx-문서</title>
     <link rel="stylesheet" href="a.css">
     <style>
+
     </style>
 </head>
 
 <body>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <div class="main-logo"><a href="http://bnx.co.kr" target="_blank">BNX</a></div>
-
     <div class="m-top-menu">
         <div class="m-menu">
             <div><i class="fa fa-list" aria-hidden="true"></i></div>
@@ -26,28 +26,20 @@
         </div>
     </div>
     <div class="side-menu">
-        <div>
-            <a href="#">메뉴아이템1</a>
-        </div>
-        <div>
-            <a href="#">메뉴아이템2</a>
-        </div>
-        <div>
-            <a href="#">메뉴아이템3</a>
-        </div>
+        <div> <a href="#">메뉴아이템1</a> </div>
+        <div> <a href="#">메뉴아이템2</a> </div>
+        <div> <a href="#">메뉴아이템3</a> </div>
     </div>
     <nav class="top-menu">
         <ul>
-            <li>
-                <a href="#">BRAND</a>
+            <li> <a href="#">BRAND</a>
                 <ul>
                     <li><a href="#">CONCEPT</a></li>
                     <li><a href="#">ABOUT BNX</a></li>
                     <li><a href="#">ABOUT eryn.B</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="#">VISUAL</a>
+            <li> <a href="#">VISUAL</a>
                 <ul>
                     <li><a href="#">CONCEPT</a></li>
                     <li><a href="#">ABOUT BNX</a></li>
@@ -61,7 +53,6 @@
             <li><a href="#">CUSTOMER</a></li>
         </ul>
     </nav>
-
     <div class="slider-1">
         <div class="btns">
             <div><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
@@ -80,7 +71,6 @@
             <div></div>
         </div>
     </div>
-
     <div class="remotes">
         <div class="remote">
             <div><a href="#">리모콘</a></div>
@@ -88,69 +78,93 @@
             <button>맨 아래로</button>
         </div>
     </div>
+    <div class="con">
+        <div class="row">
+            <div class="cell">
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_01_list.jpg" alt=""></div>
+            </div>
+            <div class="cell">
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_02_list.jpg" alt=""></div>
+            </div>
+            <div class="cell">
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_03_list.jpg" alt=""></div>
+            </div>
+            <div class="cell">
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_04_list.jpg" alt=""></div>
+            </div>
+            <div class="cell">
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_05_list.jpg" alt=""></div>
+            </div>
+            <div class="cell">
+                <div class="img-box"><img src="http://www.bnx.co.kr/data/Contents/bnx_16fw_visual_06_list.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
     <script>
-        $('.m-top-menu>div:nth-of-type(1)').click(function() {
-
+        $('.m-top-menu>div:nth-of-type(1)').click(function () {
             var $a = $('.side-menu');
-
             if ($a.hasClass('active')) {
                 $a.removeClass('active');
-            } else
-                $a.addClass('active');
+            }
+            else $a.addClass('active');
         });
-
-
-        $('.slider-1 .btns>div:nth-of-type(2)').click(function() {
+        $('.slider-1 .btns>div:nth-of-type(2)').click(function () {
             var $a = $('div.slider-1> div.slides> div.active');
             var $b = $a.next();
             var $c = $('.slider-1> .pages>div.active1')
             var $d = $c.next();
-
-
             if ($b.length == 0) {
                 $b = $('div.slider-1> div.slides> div:first-child')
             }
-
             if ($d.length == 0) {
                 $d = $('.slider-1> .pages> div:first-child')
             }
-
             $a.removeClass('active');
             $b.addClass('active');
             $c.removeClass('active1');
             $d.addClass('active1');
-
         });
-
-        $('.slider-1 .btns>div:nth-of-type(1)').click(function() {
-
+        $('.slider-1 .btns>div:nth-of-type(1)').click(function () {
             var $a = $('div.slider-1> div.slides> div.active');
             var $b = $a.prev();
             var $c = $('.slider-1> .pages>div.active1')
             var $d = $c.prev();
-
             if ($b.length == 0) {
                 $b = $('div.slider-1> div.slides> div:last-child')
             }
-
             if ($d.length == 0) {
                 $d = $('.slider-1> .pages> div:last-child')
             }
-
             $a.removeClass('active');
             $b.addClass('active');
             $c.removeClass('active1');
             $d.addClass('active1');
         });
-
-        $('.remotes .remote >button').click(function() {
+        $('.remotes .remote >button').click(function () {
             if ($(this).index() == 1) {
                 $(window).scrollTop(0);
-            } else if ($(this).index() == 2) {
-                $(window).scrollTop($('body').height());
             }
-
+            else if ($(this).index() == 2) {
+                $(window).scrollTop($('html').prop("scrollHeight"));
+            }
         });
+
+        function a() {
+            $('.slider-1 .btns>div:nth-of-type(2)').click();
+        }
+        var isOver = false;
+        $('.slider-1 .btns>div').mouseenter(function () {
+            isOver = true;
+        });
+        $('.slider-1 .btns>div').mouseleave(function () {
+            isOver = false;
+        });
+        setInterval(function () {
+            if (isOver == false) {
+                a();
+            }
+        }, 1000);
     </script>
 </body>
+
 </html>
